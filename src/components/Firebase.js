@@ -1,12 +1,9 @@
 
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore, collection, Firestore, getDocs
-} from 'firebase/firestore'
 import { getAuth, GoogleAuthProvider } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBNKJFST0Yy9yN0QhROcX24jBoUCOLspRI",
   authDomain: "carebook-2f9e8.firebaseapp.com",
@@ -17,13 +14,8 @@ const firebaseConfig = {
   measurementId: "G-VZXM95Z9GB"
 };
 
-
-
-
-// getDocs(colRef)
-//     .then((snapshot) => {
-//       console.log(snapshot.docs)
-//     })
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app);
 export const googleAuthProvider = new GoogleAuthProvider();
+export const db = getFirestore(app);
+export const storage = getStorage(app);

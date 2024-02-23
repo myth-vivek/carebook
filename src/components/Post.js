@@ -24,7 +24,7 @@ function Post({ profilePic, image, username, timestamp, message}) {
         </div>
 
         <div className='post__image'>
-            <img src={image} alt='' />
+            <img src={image} alt='image' />
         </div>
 
         <div className='post__options'>
